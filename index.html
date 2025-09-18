@@ -283,6 +283,86 @@
             align-items: center;
             gap: 8px;
         }
+
+        .footer {
+            background: #202942;
+            color: white;
+            padding: 48px 24px;
+            margin-top: 60px;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: row;
+            align-items: flex-start;
+            gap: 80px;
+        }
+
+        .footer-logo {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .footer-logo img {
+            height: 40px;
+            margin-bottom: 24px;
+        }
+
+        .app-badges {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            margin-top: 0;
+        }
+
+        .footer-section {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .footer-section.assistance {
+            min-width: 220px;
+            margin-left: 0;
+        }
+
+        .footer-section.assistance h3 {
+            margin-bottom: 12px;
+        }
+
+        .footer-links {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .footer-links a {
+            color: #B8C2CC;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        .footer-links a:hover {
+            color: white;
+        }
+
+        .copyright {
+            color: #B8C2CC;
+            font-size: 14px;
+            text-align: center;
+            margin-top: 48px;
+            padding-top: 24px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .app-badge img {
+            height: 40px;
+            width: 135px;
+            object-fit: contain;
+        }
     </style>
 </head>
 <body>
@@ -343,21 +423,8 @@
 
     <footer class="footer">
         <div class="footer-content">
-            <div class="footer-section">
-                <div class="footer-logo">
-                    <img src="logo-light.png" alt="AlmaviA Egypt" style="filter: brightness(0) invert(1);">
-                </div>
-            </div>
-            <div class="footer-section">
-                <h3>ASSISTANCE</h3>
-                <div class="footer-links">
-                    <a href="#">Privacy & Cookie policy</a>
-                    <a href="#">Terms and conditions</a>
-                    <a href="#">Refund Policy</a>
-                    <a href="#">Disclaimer</a>
-                </div>
-            </div>
-            <div class="footer-section">
+            <div class="footer-logo">
+                <img src="logo-light.png" alt="AlmaviA Egypt" style="filter: brightness(0) invert(1);">
                 <div class="app-badges">
                     <a href="#" class="app-badge">
                         <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="Download on the App Store">
@@ -365,6 +432,15 @@
                     <a href="#" class="app-badge">
                         <img src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" alt="Get it on Google Play" style="height: 40px;">
                     </a>
+                </div>
+            </div>
+            <div class="footer-section assistance">
+                <h3>ASSISTANCE</h3>
+                <div class="footer-links">
+                    <a href="#">Privacy & Cookie policy</a>
+                    <a href="#">Terms and conditions</a>
+                    <a href="#">Refund Policy</a>
+                    <a href="#">Disclaimer</a>
                 </div>
             </div>
         </div>
