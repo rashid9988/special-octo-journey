@@ -314,28 +314,15 @@
             height: 54px;
             margin-bottom: 20px;
         }
-        .app-badge img {
-            height: 36px;
-            width: 120px;
+        .footer-logo img.badge-img {
+            display: block;
+            height: 44px;
+            width: 240px;
             object-fit: contain;
-        }
-        .app-badge img[alt="Download on the App Store"],
-        .app-badge img[src$="applestore.jpg"] {
-            height: 36px;
-            width: 120px;
-            object-fit: contain;
-        }
-        .app-badge img[alt="Get it on Google Play"],
-        .app-badge img[src$="googleplay.png"] {
-            height: 36px;
-            width: 120px;
-            object-fit: contain;
-        }
-        .app-badge img[src$="applestore.png"] {
+            margin-top: 12px;
             background: #fff;
             border-radius: 8px;
-            padding: 4px 10px;
-            box-sizing: border-box;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.04);
         }
 
         .footer-section {
@@ -457,7 +444,7 @@
         <div class="footer-content">
             <div class="footer-logo">
                 <img src="logo-light.png" alt="AlmavivA Egypt">
-                <img src="badge.png" alt="App Badges" style="height: 36px; width: 240px; object-fit: contain; margin-top: 8px;">
+                <img src="badge.png" alt="App Badges" class="badge-img">
             </div>
             <div class="footer-section assistance">
                 <h3>ASSISTANCE</h3>
