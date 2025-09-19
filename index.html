@@ -311,22 +311,22 @@
             height: 48px;
             margin-bottom: 20px;
         }
-
-        .app-badges {
-            display: flex;
-            flex-direction: column;
-            gap: 8px;
-            margin-top: 0;
-        }
-
         .app-badge img {
             height: 36px;
             width: 120px;
             object-fit: contain;
-            background: none;
-            border-radius: 0;
-            padding: 0;
-            box-sizing: border-box;
+        }
+        .app-badge img[alt="Download on the App Store"],
+        .app-badge img[src$="applestore.png"] {
+            height: 36px;
+            width: 120px;
+            object-fit: contain;
+        }
+        .app-badge img[alt="Get it on Google Play"],
+        .app-badge img[src$="googleplay.png"] {
+            height: 36px;
+            width: 120px;
+            object-fit: contain;
         }
 
         .footer-section {
