@@ -319,8 +319,8 @@
             height: 44px;
             width: 120px;
             object-fit: contain;
-            margin-top: 2px;
-            background: #fff;
+            margin-top: 0.5px;
+            background: #202942;
             border-radius: 0;
             box-shadow: none;
         }
@@ -385,6 +385,10 @@
             padding-top: 0;
             border-top: none;
         }
+
+        .hidden {
+            display: none !important;
+        }
     </style>
 </head>
 <body>
@@ -405,7 +409,7 @@
         </div>
     </header>
 
-    <main class="main-content">
+    <main class="main-content" id="main-page">
         <div class="timer-section">
             <div class="timer-text">Remaining time to complete your reservation</div>
             <div class="timer">12:08</div>
@@ -443,6 +447,27 @@
         </div>
     </main>
 
+    <main class="main-content hidden" id="second-page">
+        <div class="timer-section">
+            <div class="timer-text">Remaining time to complete your reservation</div>
+            <div class="timer" id="timer-second">12:08</div>
+        </div>
+        <div class="progress-bar">
+            <div class="step completed">✓</div>
+            <div class="step completed">✓</div>
+            <div class="step completed">3</div>
+            <div class="step current">4</div>
+            <div class="step pending">5</div>
+            <div class="step pending">6</div>
+        </div>
+        <div class="form-card">
+            <h2 class="form-title">Second Page</h2>
+            <p class="form-description">
+                You have moved to the next step. This is the second page content.
+            </p>
+        </div>
+    </main>
+
     <footer class="footer">
         <div class="footer-content">
             <div class="footer-logo">
@@ -476,6 +501,7 @@
             const seconds = timeLeft % 60;
             const display = `${minutes}:${seconds.toString().padStart(2, '0')}`;
             document.querySelector('.timer').textContent = display;
+            document.getElementById('timer-second').textContent = display;
             
             if (timeLeft > 0) {
                 timeLeft--;
@@ -501,7 +527,13 @@
         });
         
         document.querySelector('.proceed-btn').addEventListener('click', function() {
-            alert('Please verify the protocol number first.');
+            // Only proceed if the button is enabled
+            if (this.style.background === 'rgb(58, 90, 197)' || this.style.background === '#3A5AC5') {
+                document.getElementById('main-page').classList.add('hidden');
+                document.getElementById('second-page').classList.remove('hidden');
+            } else {
+                alert('Please verify the protocol number first.');
+            }
         });
         
         // Input field interaction
